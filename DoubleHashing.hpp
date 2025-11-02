@@ -12,7 +12,7 @@ public:
     }
 
     int probeIndex(const T& key, int i) const override {
-        // TODO: Implement double hashing
-        return 0;
+    //h(key, i) = (h1(key) + i * h2(key)) % M
+        return (this->hash1(key) + i * hash2(key)) % this->M;        return 0;
     }
  };
